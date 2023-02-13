@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ideal Car</title>
+    </head>
+    <style>
+
+        * {
+            margin: 0;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            background-color: rgb(56, 18, 18);
+        }
+        .logo {
+            position: absolute;
+            width: 100px;
+            height: 75px;
+            margin: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            margin: 30px;
+            color: black;
+            width: 15%;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+    <script>
+
+        const alertEntry = (event) => {
+
+            event.preventDefault();
+
+            let control = document.querySelector("#customerName");
+
+            console.log(control.value, control);
+
+        };
+
+        let submitButton = document.querySelector("#process");
+
+        submitButton.addEventListener("click", alertEntry);
+    </script>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/mercedes-benz-car-logo-png-brand-image-1.png">
+            </div>
+            Ideal Car
+        </header>
+        <fieldset>
+            <legend>Manufacturer</legend>
+            <form id="manufacturerForm" action="#" method="get">
+                <input type="radio" id="bmw" name="manufacturer" value="bmw"/><label for="bmw">BMW</label><br/>
+
+                <input type="radio" id="tesla" name="manufacturer" value="tesla"/><label for="tesla">Tesla</label><br/>
+
+                <input type="radio" id="honda" name="manufacturer" value="honda"/><label for="honda">Honda</label><br/>
+
+                <input type="radio" id="toyota" name="manufacturer" value="toyota"/><label for="toyota">Toyota</label><br/>
+
+                <input type="radio" id="ford" name="manufacturer" value="ford"/><label for="ford">Ford</label><br/>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Color</legend>
+            <label for="boxColour">Choose your car color:
+                <form id="colorForm" action="#" method="get">
+                    <input type="color" id="carColor" name="carColor"/>
+                </form>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Drive Options</legend>
+            <form id="driveOptionForm" action="#" method="get">
+
+                <input type="checkbox" id="4wheel" name="driveoption" value="4wheel"/><label for="4wheel">4 Wheel Drive</label><br/>
+
+                <input type="checkbox" id="frontWheel" name="manufacturer" value="frontWheel"/><label for="frontWheel">Front Wheel Drive</label><br/>
+
+                <input type="checkbox" id="allWheel" name="manufacturer" value="allWheel"/><label for="allWheel">All Wheel Drive</label><br/>
+
+                <input type="checkbox" id="rearWheel" name="manufacturer" value="rearWheel"/><label for="rearWheel">Rear Wheel Drive</label><br/>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>License</legend>
+            <form id="driveOptionForm" action="#" method="get">
+                <input id="license" placeholder="License" type="text">
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Comments</legend>
+            <form id="driveOptionForm" action="#" method="get">
+                <textarea id="Comments" placeholder="Comments"></textarea>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Seat Types</legend>
+            <form id="seatForm" action="#" method="get">
+                <select id="seatTypes" size="5" style="width: 100%">
+
+                    <option value="fauxLeather">Faux Leather</option>
+
+                    <option value="leather">Leather</option>
+
+                    <option value="nylon">Nylon</option>
+
+                    <option value="polyester">Polyester</option>
+
+                    <option value="vinyl">Vinyl</option>
+
+                </select>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Wheel Types</legend>
+            <form id="wheelForm" action="#" method="get">
+
+                    <input type="radio" id="steel" name="wheel" value="steel"/><label for="steel">Steel</label><br/>
+
+                    <input type="radio" id="alloys" name="wheel" value="alloys"/><label for="alloys">Alloys</label><br/>
+
+                    <input type="radio" id="forged" name="wheel" value="forged"/><label for="forged">forged</label><br/>
+
+                    <input type="radio" id="multipiece" name="wheel" value="multipiece"/><label for="multipiece">Multipiece</label><br/>
+
+                </select>
+            </form>
+        </fieldset>
+        <input type="submit" id="process" />
+    </body>
+</html>
